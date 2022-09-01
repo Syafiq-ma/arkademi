@@ -24,20 +24,6 @@ const Spesialisasi = () => {
     }
   };
 
-  const isDisabled = (direction) => {
-    if (direction === 'prev') {
-      return currentIndex <= 0;
-    }
-
-    if (direction === 'next' && carousel.current !== null) {
-      return (
-        carousel.current.offsetWidth * currentIndex >= maxScrollWidth.current
-      );
-    }
-
-    return false;
-  };
-
   useEffect(() => {
     if (carousel !== null && carousel.current !== null) {
       carousel.current.scrollLeft = carousel.current.offsetWidth * currentIndex;
@@ -81,14 +67,14 @@ const Spesialisasi = () => {
                     Menjadi Ahli&nbsp;
                     <span className='text-blue-100'>K3 (Kesehatan & Keselamatan Kerja)</span>
                 </div>
-                <div className='bg-cover font-extrabold text-base items-center text-black px-7 py-5 rounded-lg' style={{backgroundImage: `url(${K3})`, width:'420.44px', height:'109px'}}>
+                <div className='bg-cover font-extrabold text-base items-center text-black px-7 py-5 rounded-lg' style={{backgroundImage: `url(${K3LL})`, width:'420.44px', height:'109px'}}>
                     Menjadi Ahli&nbsp;
                     <span className='text-blue-100'>Kesehatan, Keselamatan Kerja & Perlindungan Lingkungan (K3LL)</span>
                 </div>
                 </div>
             </div>
         </div>
-        <button className='text-xs font-bold border rounded-md mt-6 p px-5 py-3 mx-auto' style={{borderColor:'#C0C2C6'}}>Lihat Semua Spesialisasi</button>
+        <button className='text-xs text-gray-50 font-bold border rounded-md mt-6 p px-5 py-3 mx-auto' style={{borderColor:'#C0C2C6'}}>Lihat Semua Spesialisasi</button>
     </div>
   );
 };

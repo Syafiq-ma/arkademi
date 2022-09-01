@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
-import TrendingIcon from '../assets/trending-icon.png'
+import Discount from '../assets/discount.png'
 import Card from './Card'
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 
-const Trending = () => {
+const FlashSale = () => {
     const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
@@ -37,8 +37,10 @@ const Trending = () => {
     return(
         <div className='md:px-28 px-4 mt-7'>
             <div className='flex items-center'>
-                <img src={TrendingIcon} width={35} alt="trending"/>
-                <div className='text=black font-extrabold text-2xl ml-3'>Trending</div>
+                <img src={Discount} width={35} alt="trending"/>
+                <div className='text-black font-extrabold text-2xl ml-3 mr-5'>Flash Sale</div>
+                <div className='text-gray-100 font-semibold text-base mr-2'>Berakhir dalam</div>
+                <div className='text-white font-bold text-base px-3 py-1 rounded-3xl' style={{backgroundImage: 'linear-gradient(225.66deg, #FFAA5D -30.42%, #F63C3C 91.94%)'}}>08 : 52 : 05</div>
             </div>
             <div className="carousel mt-6">
                 <div className="relative flex items-center">
@@ -74,4 +76,4 @@ const Trending = () => {
     )
 }
 
-export default Trending
+export default FlashSale

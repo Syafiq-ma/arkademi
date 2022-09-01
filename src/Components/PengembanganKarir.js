@@ -1,9 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
-import TrendingIcon from '../assets/trending-icon.png'
+import Discount from '../assets/discount.png'
 import Card from './Card'
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 
-const Trending = () => {
+const PengembanganKarier = () => {
     const maxScrollWidth = useRef(0);
   const [currentIndex, setCurrentIndex] = useState(0);
   const carousel = useRef(null);
@@ -35,10 +35,10 @@ const Trending = () => {
       : 0;
   }, []);
     return(
-        <div className='md:px-28 px-4 mt-7'>
-            <div className='flex items-center'>
-                <img src={TrendingIcon} width={35} alt="trending"/>
-                <div className='text=black font-extrabold text-2xl ml-3'>Trending</div>
+        <div className='md:px-28 px-4 mt-20'>
+            <div className='flex justify-between'>
+                <div className='font-extrabold text-xl'>Pengembangan Karier</div>
+                <div className='font-extrabold text-base mr-24 text-blue-100'>Lihat Semua</div>
             </div>
             <div className="carousel mt-6">
                 <div className="relative flex items-center">
@@ -74,4 +74,4 @@ const Trending = () => {
     )
 }
 
-export default Trending
+export default PengembanganKarier
