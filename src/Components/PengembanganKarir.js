@@ -1,5 +1,4 @@
 import { useState, useRef, useEffect } from 'react';
-import Discount from '../assets/discount.png'
 import Card from './Card'
 import { FiChevronRight, FiChevronLeft } from 'react-icons/fi';
 
